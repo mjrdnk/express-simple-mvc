@@ -7,8 +7,10 @@
 ```
 git clone https://github.com/mjrdnk/express-simple
 cd express-simple/ && npm install
-go to http://localhost:5000/api/v1.0/hello
+node server.js
 ```
+
+And then go to http://localhost:5000/api/v1.0/hello
 
 ### Credits:
 Flighplan based on this gist https://gist.github.com/learncodeacademy/35045e64d2bbe6eb14f9
