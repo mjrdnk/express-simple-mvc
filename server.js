@@ -26,5 +26,5 @@ app.use(bodyParser.urlencoded({
 app.use(API_BASE, helloWorld);
 
 app.listen(port, function() {
-    console.log('App is running on ', port);
+    console.log('express-simple is running on port ', port);
 });
