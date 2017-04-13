@@ -1,6 +1,6 @@
 # express-simple
 ## Simple starter, bare bone structure based on ExpressJS. Helps easily creating controllers for routes. Provides Flightplan file for simple deployment strategy.
-### This project allows for quickly developing REST APIS, which route return json documents.
+### This project allows for fast development of REST APIS, where routes can return JSON documents.
 
 ##### To install, open your terminal and run following commands:
 
