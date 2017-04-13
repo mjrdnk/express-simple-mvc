@@ -9,7 +9,7 @@ git clone https://github.com/mjrdnk/express-simple
 cd express-simple/ && npm install
 ```
 
-To run express-simple:
+To run express-simple, make sure you are in your projects directory and run this command:
 
 ```
 node server.js 
@@ -19,6 +19,7 @@ or use this optional tool for running the server with reloading:
 
 ```
 npm install -g nodemon
+nodemon
 ```
 
 And then go to http://localhost:5000/api/v1.0/hello
