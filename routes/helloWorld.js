@@ -1,8 +1,10 @@
 let express = require('express');
 let router = express.Router();
 
-let helloWorld = require('../controllers/helloWorld.js');
+let HelloWorldController = require('../controllers/helloWorld.js');
 
-router.get('/hello', helloWorld.get);
+// .get is a method which 'sits' on HelloWorldController
+// for more check controllers/helloWorld.js
+router.get('/hello', HelloWorldController.get);
 
 module.exports = router;
