@@ -34,7 +34,7 @@ nodemon
 Then, go to http://localhost:5000/api/v1.0/hello
 
 You will see this screen in your browser
-<img src='https://i.imgur.com/3Sng2kb.png' />
+<img src='https://i.imgur.com/SHHwXCd.png' />
 <br>
 
 ## Credit
