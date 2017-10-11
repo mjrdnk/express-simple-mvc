@@ -21,7 +21,7 @@ cd express-simple/ && npm install
 To run express-simple, run this command from your project directory:
 
 ```
-node server.js 
+npm start
 ```
 
 Or, use this optional tool for running the server with reloading:
