@@ -33,6 +33,10 @@ nodemon
 
 Then, go to http://localhost:5000/api/v1.0/hello
 
+You will see this screen in your browser
+<img src='https://i.imgur.com/3Sng2kb.png' />
+<br>
+
 ## Credit
 Flightplan based on [this gist](https://gist.github.com/learncodeacademy/35045e64d2bbe6eb14f9)
 
