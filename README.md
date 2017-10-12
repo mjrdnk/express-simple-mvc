@@ -39,19 +39,22 @@ You will see this screen in your browser
 ## Examples
 
 ### Send sms with nexmo
-// allows you send sms using the nexmo platform
+// This is a controller that allows users send messages easily using the nexmo platform
 //get your keys from nexmo.com
 
 ```
+
 let Nexmo = require('nexmo');
 
 function nexmo(){
     this.nexmo = {}
     this.apiKey;
     this.apiSecret;
+    this.setCredentials = setCredentials;
+    this.sendSms = sendSms;
 }
 
-nexmo.prototype.setCredentials = (apiKey, apiSecret)=>{
+let setCredentials = (apiKey, apiSecret)=>{
     this.apiKey = apiKey;
     this.apiSecret = apiSecret;
     this.nex = new Nexmo({
@@ -60,7 +63,7 @@ nexmo.prototype.setCredentials = (apiKey, apiSecret)=>{
     })
 }
 
-nexmo.prototype.sendSms = (from,toPath,message)=>{    
+let sendSms = (from,toPath,message)=>{
     // toPath = file absolute path
             this.nex.message.sendSms(from, to, message, (err,responseData)=>{
         if(err){
@@ -69,9 +72,15 @@ nexmo.prototype.sendSms = (from,toPath,message)=>{
         }
     });
 }
-module.exports = nexmo;
+module.exports = nexmoSms;
+```
 
-
+### Usage
+```
+let nexmoSms = require(*module absolute path*)
+nexmoSms.setCredentials(apiKey,apiSecret)
+router.get('/sms',nexmoSms.sendSms);
+```
 
 ## Credit
 Flightplan based on [this gist](https://gist.github.com/learncodeacademy/35045e64d2bbe6eb14f9)

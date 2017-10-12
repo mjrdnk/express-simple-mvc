@@ -7,9 +7,11 @@ function nexmo(){
     this.nexmo = {}
     this.apiKey;
     this.apiSecret;
+    this.setCredentials = setCredentials;
+    this.sendSms = sendSms;
 }
 
-nexmo.prototype.setCredentials = (apiKey, apiSecret)=>{
+let setCredentials = (apiKey, apiSecret)=>{
     this.apiKey = apiKey;
     this.apiSecret = apiSecret;
     this.nex = new Nexmo({
@@ -20,7 +22,7 @@ nexmo.prototype.setCredentials = (apiKey, apiSecret)=>{
 
 
 
-nexmo.prototype.sendSms = (from,toPath,message)=>{
+let sendSms = (from,toPath,message)=>{
     
     // toPath = file absolute path
 
