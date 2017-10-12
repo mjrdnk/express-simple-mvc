@@ -18,17 +18,16 @@ git clone https://github.com/mjrdnk/express-simple
 cd express-simple/ && npm install
 ```
 ## Usage
-To run express-simple, run this command from your project directory:
+To run express-simple in development, run this command from your project directory:
 
 ```
-node server.js 
+npm run dev
 ```
 
-Or, use this optional tool for running the server with reloading:
+To run express-simple in production, run this command from your project directory:
 
 ```
-npm install -g nodemon
-nodemon
+npm start
 ```
 
 Then, go to http://localhost:5000/api/v1.0/hello

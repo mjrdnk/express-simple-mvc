@@ -4,6 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -16,6 +18,7 @@
   },
   "devDependencies": {
     "flightplan": "^0.6.15",
-    "fly": "^2.0.4"
+    "fly": "^2.0.4",
+    "nodemon": "^1.12.1"
   }
 }
