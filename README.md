@@ -39,9 +39,8 @@ You will see this screen in your browser
 ## Examples
 
 #### Example : nexmo sms service
-To write your custom controllers write your functions in a file and export the module
-```
-
+To write your custom controllers write your functions in a file and export the module, like this:
+```javascript
 let Nexmo = require('nexmo');
 
 function nexmo () {
@@ -68,8 +67,8 @@ let sendSms = (from,to,message) => {
 module.exports = nexmo;
 ```
 
-the controller can be reused in a router nexmo.route.js file like this
-```
+The controller can be reused in a router nexmo.route.js file, like this:
+```javascript
 let router = require(express).Router();
 
 let NexmoController = require('../controllers/nexmo.js);
@@ -78,13 +77,13 @@ router.get('/sms',NexmoController.sendSms);
 
 module.export = router
 ```
-then you can use it in your server.js file like this
 
-```
+Then you can use it in your server.js file, like this:
+```javascript
  let nexmo = require('./routes/nexmo.route.js);
 
 app.use(API_BASE,nexmo);
-
+```
 
 ## Credit
 Flightplan based on [this gist](https://gist.github.com/learncodeacademy/35045e64d2bbe6eb14f9)
