@@ -38,33 +38,26 @@ You will see this screen in your browser
 
 ## Examples
 
-### Send sms with nexmo
-// This is a controller that allows users send messages easily using the nexmo platform
-//get your keys from nexmo.com
-
+#### Example : nexmo sms service
+To write your custom controllers write your functions in a file and export the module
 ```
 
 let Nexmo = require('nexmo');
 
-function nexmo(){
+function nexmo () {
     this.nexmo = {}
-    this.apiKey;
-    this.apiSecret;
-    this.setCredentials = setCredentials;
+    this.apiKey = yourapiKey; // get your api key and secret from nexmo.com
+    this.apiSecret = yourapiSecret;
     this.sendSms = sendSms;
 }
 
-let setCredentials = (apiKey, apiSecret) => {
-    this.apiKey = apiKey;
-    this.apiSecret = apiSecret;
-    this.nex = new Nexmo({
+    this.nex = new Nexmo ({
         apiKey : this.apiKey,
         apiSecret : this.apiSecret
     })
-}
 
-let sendSms = (from,toPath,message) =>{ 
-    // toPath = file absolute path
+
+let sendSms = (from,to,message) => { 
             this.nex.message.sendSms(from, to, message, (err,responseData) => {
         if(err){
             console.log('err',err.message);
@@ -72,9 +65,25 @@ let sendSms = (from,toPath,message) =>{
         }
     });
 }
-module.exports = nexmoSms;
+module.exports = nexmo;
 ```
 
+the controller can be reused in a router nexmo.route.js file like this
+```
+let router = require(express).Router();
+
+let NexmoController = require('../controllers/nexmo.js);
+
+router.get('/sms',NexmoController.sendSms);
+
+module.export = router
+```
+then you can use it in your server.js file like this
+
+```
+ let nexmo = require('./routes/nexmo.route.js);
+
+app.use(API_BASE,nexmo);
 
 
 ## Credit
