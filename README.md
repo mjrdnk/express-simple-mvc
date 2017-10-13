@@ -41,7 +41,7 @@ You will see this screen in your browser
 #### Example : nexmo sms service
 To write your custom controllers write your functions in a file and export the module, like this:
 ```javascript
-let Nexmo = require('nexmo');
+const Nexmo = require('nexmo');
 
 function nexmo () {
     this.nexmo = {}
@@ -50,16 +50,15 @@ function nexmo () {
     this.sendSms = sendSms;
 }
 
-    this.nex = new Nexmo ({
-        apiKey : this.apiKey,
-        apiSecret : this.apiSecret
-    })
-
+this.nex = new Nexmo ({
+    apiKey : this.apiKey,
+    apiSecret : this.apiSecret
+});
 
 let sendSms = (from,to,message) => { 
             this.nex.message.sendSms(from, to, message, (err,responseData) => {
-        if(err){
-            console.log('err',err.message);
+        if (err) {
+            console.log('err', err.message);
             return;
         }
     });
@@ -69,20 +68,20 @@ module.exports = nexmo;
 
 The controller can be reused in a router nexmo.route.js file, like this:
 ```javascript
-let router = require(express).Router();
+const router = require(express).Router();
 
-let NexmoController = require('../controllers/nexmo.js);
+const NexmoController = require('../controllers/nexmo.js');
 
-router.get('/sms',NexmoController.sendSms);
+router.get('/sms', NexmoController.sendSms);
 
 module.export = router
 ```
 
 Then you can use it in your server.js file, like this:
 ```javascript
- let nexmo = require('./routes/nexmo.route.js);
+const nexmo = require('./routes/nexmo.route.js');
 
-app.use(API_BASE,nexmo);
+app.use(API_BASE, nexmo);
 ```
 
 ## Credit
