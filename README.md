@@ -54,7 +54,7 @@ function nexmo(){
     this.sendSms = sendSms;
 }
 
-let setCredentials = (apiKey, apiSecret)=>{
+let setCredentials = (apiKey, apiSecret) => {
     this.apiKey = apiKey;
     this.apiSecret = apiSecret;
     this.nex = new Nexmo({
@@ -63,9 +63,9 @@ let setCredentials = (apiKey, apiSecret)=>{
     })
 }
 
-let sendSms = (from,toPath,message)=>{
+let sendSms = (from,toPath,message) =>{ 
     // toPath = file absolute path
-            this.nex.message.sendSms(from, to, message, (err,responseData)=>{
+            this.nex.message.sendSms(from, to, message, (err,responseData) => {
         if(err){
             console.log('err',err.message);
             return;
@@ -75,12 +75,7 @@ let sendSms = (from,toPath,message)=>{
 module.exports = nexmoSms;
 ```
 
-### Usage
-```
-let nexmoSms = require(*module absolute path*)
-nexmoSms.setCredentials(apiKey,apiSecret)
-router.get('/sms',nexmoSms.sendSms);
-```
+
 
 ## Credit
 Flightplan based on [this gist](https://gist.github.com/learncodeacademy/35045e64d2bbe6eb14f9)
