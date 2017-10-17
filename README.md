@@ -1,18 +1,18 @@
 # express-simple
 > A project for fast development of REST APIs, where routes can return JSON documents
 
-Simple starter, barebone structure based on ExpressJS. Helps easily create controllers for routes. Provides Flightplan file for simple deployment strategy.
+Simple starter, barebone structure based on ExpressJS. Helps to easily create controllers for routes. Provides Flightplan file for simple deployment strategy.
 
 This project uses the following libraries:
-- [express](https://www.npmjs.com/package/express)
-- [helmet](https://www.npmjs.com/package/helmet)
-- [morgan](https://www.npmjs.com/package/morgan)
-- [body-parser](https://www.npmjs.com/package/body-parser)
-- [flightplan](https://www.npmjs.com/package/flightplan)
-- [fly](https://www.npmjs.com/package/fly)
+- [Express](https://www.npmjs.com/package/express)
+- [Helmet](https://www.npmjs.com/package/helmet)
+- [Morgan](https://www.npmjs.com/package/morgan)
+- [Body-parser](https://www.npmjs.com/package/body-parser)
+- [Flightplan](https://www.npmjs.com/package/flightplan)
+- [Fly](https://www.npmjs.com/package/fly)
 
 ## Installation
-To install, open your terminal and run the following commands:
+Open your terminal and run the following commands:
 ```
 git clone https://github.com/mjrdnk/express-simple
 cd express-simple/ && npm install
