@@ -55,7 +55,7 @@ this.nex = new Nexmo ({
     apiSecret : this.apiSecret
 });
 
-let sendSms = (from,to,message) => { 
+let sendSms = (from,to,message) => {
             this.nex.message.sendSms(from, to, message, (err,responseData) => {
         if (err) {
             console.log('err', err.message);
@@ -83,6 +83,12 @@ const nexmo = require('./routes/nexmo.route.js');
 
 app.use(API_BASE, nexmo);
 ```
+
+## Enviroment Variables
+
+#### `$SSH_AUTH_SOCK`
+Contains the path of the unix file socket that the agent uses for communication with other processes. This is essential for `ssh-add`. [See more details](http://blog.joncairns.com/2013/12/understanding-ssh-agent-and-ssh-add/).
+
 
 ## Credit
 Flightplan based on [this gist](https://gist.github.com/learncodeacademy/35045e64d2bbe6eb14f9)
